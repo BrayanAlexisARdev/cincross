@@ -3,12 +3,12 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 
-[assembly: AssemblyCompany("x5VER01")]
+[assembly: AssemblyCompany("CINCROSS")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: AssemblyInformationalVersion("1.0.0")]
-[assembly: AssemblyProduct("x5VER01")]
-[assembly: AssemblyTitle("x5VER01")]
+[assembly: AssemblyProduct("CINCROSS")]
+[assembly: AssemblyTitle("CINCROSS")]
 [assembly: TargetPlatform("Windows7.0")]
 [assembly: SupportedOSPlatform("Windows7.0")]
 [assembly: AssemblyVersion("1.0.0.0")]

@@ -5,27 +5,30 @@
 ;COLOR: Es el color Elegido que afecta a la aplicación en general con el Porciento de transparencia correspondiente a COLOR;
 ;PANTALLA_GIF: Corresponde a la imagen .gif que va la parte de TV;
 ;TEMA_FONDO: Imagen de fondo de la TV antes de Cassette, que abarca el menú con COLOR IMAGE THEME;
-;TEMA_TV: Imagen de fondo que abarca a CASSETTES y TAREAS;
+;TEMA_TV: Imagen de fondo que abarca a CASSETTES;
+;TAGS: Corresponde a tags para que luego en una lista se muestre por categoría
 ;Este esquema ordenado de cassettes debe respetarse e implementarse el código correspondiente para que funcione;
 ; =================================================== ;
 ; CONFIGURACIÓN MAESTRA DE CASSETTES 5CRX (v1.1) ;
-; ===CANTIDAD DE CASSETTES 17==80=;
+; ===CANTIDAD DE CASSETTES ==52=;
 
 [CASSETTE 01]
 TITULO: LO-FI CHILL
 IMAGEN: cass010.png
-CONTENIDO: https://stream-289.surfernetwork.com/g1eblmkk5dvuv?zt
+CONTENIDO: https://boxradio-edge-07.streamafrica.net/lofi
 COLOR: #ff0099
 PANTALLA_GIF: girl7_ANI.gif
 TEMA_TV: rain_TV.gif
+TAGS: lofi,relax
 
 [CASSETTE 02]
 TITULO: WEEB ANIME RADIO
 IMAGEN: cass011.png
-CONTENIDO: https://stream-286.surfernetwork.com/2d764zgh2uhvv?zt
+CONTENIDO: https://boxradio-edge-00.streamafrica.net/anime
 COLOR: #FFCC00
 PANTALLA_GIF: saiyanm_ANI.gif
 TEMA_TV: gcard_TV.gif
+TAGS: rock,anime
 
 [CASSETTE 03]
 TITULO: BLUES CLUB
@@ -34,6 +37,7 @@ CONTENIDO: https://bluesclub.stream.laut.fm/bluesclub?
 COLOR: #0085eb
 PANTALLA_GIF: bluesr_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock,blues
 
 [CASSETTE 04]
 TITULO: RPGN RADIO
@@ -42,6 +46,7 @@ CONTENIDO: http://listen.rpgamers.net/rpgn
 COLOR: #1364e8
 PANTALLA_GIF: rpgn_ANI.gif
 TEMA_TV: rpgnrad_TV.gif
+TAGS: game,relax,fantasy,orchesta
 
 [CASSETTE 05]
 TITULO: ADR Jazz Sakura
@@ -50,6 +55,7 @@ CONTENIDO: https://kathy.torontocast.com:3330/stream
 COLOR: #FF69B4
 PANTALLA_GIF: girl8_ANI.gif
 TEMA_TV: flowbk_TV.gif
+TAGS: jazz,relax,blues
 
 [CASSETTE 06]
 TITULO: RAD CLASSIC ROCK
@@ -58,6 +64,7 @@ CONTENIDO: https://stream-204.surfernetwork.com/7w3yq9w0k8quv?zt
 COLOR: #ff1e05
 PANTALLA_GIF: tigersn_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 07]
 TITULO: VOCALOID RS
@@ -66,6 +73,7 @@ CONTENIDO: http://curiosity.shoutca.st:8019/stream
 COLOR: #2BFFDE
 PANTALLA_GIF: mikvoc_ANI.gif
 TEMA_TV: vocca_TV.gif
+TAGS: rock,techno
 
 [CASSETTE 08]
 TITULO: SMOOTH JAZZ
@@ -74,6 +82,7 @@ CONTENIDO: https://jazz.streeemer.com/listen/jazz/radio.aac
 COLOR: #D2691E
 PANTALLA_GIF: girl4_ANI.gif
 TEMA_TV: flowbk_TV.gif
+TAGS: jazz,relax
 
 [CASSETTE 09]
 TITULO: ADR J-Pop Powerplay Kawaii
@@ -82,6 +91,7 @@ CONTENIDO: http://kathy.torontocast.com:3060/stream
 COLOR: #5312CC
 PANTALLA_GIF: girl3_ANI.gif
 TEMA_TV: flowbk_TV.gif
+TAGS: pop,anime,relax
 
 [CASSETTE 10]
 TITULO: POP DANCE
@@ -90,6 +100,7 @@ CONTENIDO: https://stream-204.surfernetwork.com/gk5unhbt1uhvv?zt
 COLOR: #da47ff
 PANTALLA_GIF: girl2_ANI.gif
 TEMA_TV: bluesk_TV.gif
+TAGS: pop,relax
 
 [CASSETTE 11]
 TITULO: RAINWAVE ALL
@@ -98,6 +109,7 @@ CONTENIDO: https://allrelays.rainwave.cc/all.mp3
 COLOR: #5d3693
 PANTALLA_GIF: rwave_all.gif
 TEMA_TV: old_TV.gif
+TAGS: game
 
 [CASSETTE 12]
 TITULO: RAINWAVE GAME
@@ -106,6 +118,7 @@ CONTENIDO: https://relay.rainwave.cc/game.mp3
 COLOR: #db393a
 PANTALLA_GIF: rwave_game.gif
 TEMA_TV: old_TV.gif
+TAGS: game
 
 [CASSETTE 13]
 TITULO: RADIO SEGA
@@ -114,6 +127,7 @@ CONTENIDO: https://icecast.radiosega.net/live
 COLOR: #00a6ff
 PANTALLA_GIF: son_ANI.gif
 TEMA_TV: segg_TV.gif
+TAGS: game
 
 [CASSETTE 14]
 TITULO: RADIO RIVENDELL
@@ -122,6 +136,7 @@ CONTENIDO: https://play.radiorivendell.com/radio/8000/radio.mp3
 COLOR: #eda32b
 PANTALLA_GIF: ancient_ANI.gif
 TEMA_TV: ancient_TV.gif
+TAGS: game,fantasy
 
 [CASSETTE 15]
 TITULO: FREECODECAMP RADIO
@@ -130,6 +145,7 @@ CONTENIDO: https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/low.mp3
 COLOR: #78cf00
 PANTALLA_GIF: girl6_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: relax,code
 
 [CASSETTE 16]
 TITULO: PLANET RADIO THE CLUB
@@ -138,6 +154,7 @@ CONTENIDO: https://streams.planetradio.de/plrchannels/mp3/hqtheclub.mp3
 COLOR: #bd2402
 PANTALLA_GIF: car2_ANI.gif
 TEMA_TV: club_TV.gif
+TAGS: techno,rock,pop
 
 [CASSETTE 17]
 TITULO: SLAY Radio
@@ -146,6 +163,7 @@ CONTENIDO: http://relay4.slayradio.org:8000/
 COLOR: #d769f5
 PANTALLA_GIF: girl1_ANI.gif
 TEMA_TV: slayy_TV.gif
+TAGS: club,techno,game
 
 [CASSETTE 18]
 TITULO: CAPRICE CLASS PIANO
@@ -154,6 +172,7 @@ CONTENIDO: http://79.120.77.11:8002/piano
 COLOR: #e00000
 PANTALLA_GIF: fairy_ANI.gif
 TEMA_TV: piano_TV.gif
+TAGS: classic,piano,instrumental
 
 [CASSETTE 19]
 TITULO: SpriteLayer VGR
@@ -162,6 +181,7 @@ CONTENIDO: https://radio.spritelayerradio.com:8010/all
 COLOR: #b829ff
 PANTALLA_GIF: yixu_ANI.gif
 TEMA_TV: segg_TV.gif
+TAGS: rock,techno,game
 
 [CASSETTE 20]
 TITULO:POSITIVE
@@ -170,6 +190,7 @@ CONTENIDO: https://streaming.positivity.radio/pr/workoutrelax/icecast.audio
 COLOR: #ffabfe
 PANTALLA_GIF: posi_ANI.gif
 TEMA_TV: segg_TV.gif
+TAGS: relax
 
 [CASSETTE 21]
 TITULO:R Workout 160 BPM
@@ -178,6 +199,7 @@ CONTENIDO: https://drive.uber.radio/uber-app/sportifybpm160/icecast.audio
 COLOR: #7e0dff
 PANTALLA_GIF: work160_ANI.gif
 TEMA_TV: segg_TV.gif
+TAGS: gym
 
 [CASSETTE 22]
 TITULO: Hip Hop Workout
@@ -186,6 +208,7 @@ CONTENIDO: https://drive.uber.radio/uber-app/sportifyrandb/icecast.audio
 COLOR: #bb00ff
 PANTALLA_GIF: girl2_ANI.gif
 TEMA_TV: segg_TV.gif
+TAGS: gym
 
 [CASSETTE 23]
 TITULO: THE BEATLES
@@ -194,6 +217,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/beatles/icecast.audio
 COLOR: #0029e0
 PANTALLA_GIF: beat_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: rock
 
 [CASSETTE 24]
 TITULO: AC DC
@@ -202,6 +226,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/acdc/icecast.audio
 COLOR: #fc1c1c
 PANTALLA_GIF: acdc_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 25]
 TITULO: GUNS AND ROSES
@@ -210,6 +235,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/gunsnroses/icecast.audio
 COLOR: #fc881c
 PANTALLA_GIF: guns_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 26]
 TITULO: METALLICA
@@ -218,6 +244,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/metallica/icecast.audio
 COLOR: #0e2ecc
 PANTALLA_GIF: metall_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 27]
 TITULO: IRON MAIDEN
@@ -226,6 +253,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/ironmaiden/icecast.audio
 COLOR: #8400b8
 PANTALLA_GIF: ironm_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 28]
 TITULO: MOTORHEAD
@@ -234,6 +262,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/motorhead/icecast.audio
 COLOR: #a900c7
 PANTALLA_GIF: motorh_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 29]
 TITULO: BOSTON
@@ -242,6 +271,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/boston/icecast.audio
 COLOR: #dee600
 PANTALLA_GIF: boston_ANI.gif
 TEMA_TV: vold_TV.gif
+TAGS: rock
 
 [CASSETTE 30]
 TITULO: BILLY IDOL
@@ -250,6 +280,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/billyidol/icecast.audio
 COLOR: #fa1191
 PANTALLA_GIF: billy_ANI.gif
 TEMA_TV: slayy_TV.gif
+TAGS: rock
 
 [CASSETTE 31]
 TITULO: HUEY LEWIS
@@ -258,6 +289,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/hueylewis/icecast.audio
 COLOR: #0eaae8
 PANTALLA_GIF: huey_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 32]
 TITULO: CHICAGO
@@ -266,6 +298,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/chicago/icecast.audio
 COLOR: #14f7f0
 PANTALLA_GIF: chicago_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 33]
 TITULO: BON JOVI
@@ -274,6 +307,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/bonjovi/icecast.audio
 COLOR: #34edea
 PANTALLA_GIF: bonj_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 34]
 TITULO: ELVIS PRESLEY
@@ -282,6 +316,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/elvispresley/icecast.audio
 COLOR: #de0f00
 PANTALLA_GIF: elvis_ANI.gif
 TEMA_TV: vold_TV.gif
+TAGS: rock
 
 [CASSETTE 35]
 TITULO: AEROSMITH
@@ -290,6 +325,7 @@ CONTENIDO: http://streaming.exclusive.radio/er-app/aerosmith/icecast.audio
 COLOR: #4200db
 PANTALLA_GIF: aero_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 36]
 TITULO: ZZ TOP
@@ -298,6 +334,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/zztop/icecast.audio
 COLOR: #ebae15
 PANTALLA_GIF: zztop_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 37]
 TITULO: VAN HALEN
@@ -306,6 +343,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/vanhalen/icecast.audio
 COLOR: #04de00
 PANTALLA_GIF: van_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 38]
 TITULO: MOTLEY CRUE
@@ -314,6 +352,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/motleycrue/icecast.audio
 COLOR: #ba4400
 PANTALLA_GIF: motley_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 39]
 TITULO: BLACK SABBATH
@@ -322,6 +361,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/blacksabbath/icecast.audio
 COLOR: #720ac7
 PANTALLA_GIF: ozy_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 40]
 TITULO: ROLLING STONES
@@ -330,6 +370,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/rollingstones/icecast.audio
 COLOR: #c70021
 PANTALLA_GIF: roll_ANI.gif
 TEMA_TV: steel_TV.gif
+TAGS: rock
 
 [CASSETTE 41]
 TITULO: TikTok TRENDING
@@ -338,6 +379,7 @@ CONTENIDO: https://streaming.exclusive.radio/er-app/tiktoktrending/icecast.audio
 COLOR: #ff00bf
 PANTALLA_GIF: girl13_ANI.gif
 TEMA_TV: vocca_TV.gif
+TAGS: variety
 
 [CASSETTE 42]
 TITULO: Final Fantasy RADIO
@@ -346,6 +388,7 @@ CONTENIDO: http://finalfantasystation.com:8000/stream
 COLOR: #00ccff
 PANTALLA_GIF: finalf_ANI.gif
 TEMA_TV: finaltev_TV.gif
+TAGS: game,fantasy
 
 [CASSETTE 43]
 TITULO: ASPEN
@@ -354,6 +397,7 @@ CONTENIDO: https://27613.live.streamtheworld.com/ASPEN.mp3
 COLOR: #db0000
 PANTALLA_GIF: girl12_ANI.gif
 TEMA_TV: vocca_TV.gif
+TAGS: rock,variety,arg
 
 [CASSETTE 44]
 TITULO: RADIO DISNEY
@@ -362,6 +406,7 @@ CONTENIDO: https://24233.live.streamtheworld.com/DISNEY_ARG_BA.mp3
 COLOR: #cdcdcd
 PANTALLA_GIF: radisney_ANI.gif
 TEMA_TV: vocca_TV.gif
+TAGS: variety,arg
 
 [CASSETTE 45]
 TITULO: BLUE FM
@@ -370,6 +415,7 @@ CONTENIDO: https://27433.live.streamtheworld.com/BLUE_FM_100_7AAC_SC
 COLOR: #0053c7
 PANTALLA_GIF: waters_ANI.gif
 TEMA_TV: vocca_TV.gif
+TAGS: variety,arg
 
 [CASSETTE 46]
 TITULO: SOLO ROCK NACIONAL
@@ -378,6 +424,7 @@ CONTENIDO: https://stream-280.surfernetwork.com/g9purm3158quv
 COLOR: #31c1e8
 PANTALLA_GIF: girl14_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: rock,arg
 
 [CASSETTE 47]
 TITULO: LOS 40 PRINCIPALES
@@ -386,6 +433,7 @@ CONTENIDO: https://edge03.radiohdvivo.com/los40
 COLOR: #31c1e8
 PANTALLA_GIF: los40_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: rock,pop
 
 [CASSETTE 48]
 TITULO: FM ROCK AND POP
@@ -394,6 +442,7 @@ CONTENIDO: https://27393.live.streamtheworld.com/ROCKANDPOPAAC_SC
 COLOR: #65b665
 PANTALLA_GIF: girl14_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: rock,pop
 
 [CASSETTE 49]
 TITULO: RAD ARG TROPICAL
@@ -402,6 +451,7 @@ CONTENIDO: https://stream-204.surfernetwork.com/vwhtrlkke04tv
 COLOR: #305889
 PANTALLA_GIF: tropical_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: variety,arg
 
 [CASSETTE 50]
 TITULO: RADIO ONE
@@ -410,6 +460,7 @@ CONTENIDO: https://one.stweb.tv/one/live/playlist.m3u8
 COLOR: #305889
 PANTALLA_GIF: tropical_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: rock,arg
 
 [CASSETTE 51]
 TITULO: 24/7 CHIPTUNE RADIO
@@ -418,6 +469,7 @@ CONTENIDO: https://radio.zelerk.com/listen/chiptune/stream.mp3
 COLOR: #305889
 PANTALLA_GIF: tropical_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: variety,game
 
 [CASSETTE 52]
 TITULO: 24/7 Vapor Funk Radio
@@ -426,3 +478,4 @@ CONTENIDO: https://radio.zelerk.com/listen/vapor/stream.mp3
 COLOR: #305889
 PANTALLA_GIF: tropical_ANI.gif
 TEMA_TV: voldoff_TV.gif
+TAGS: variety
