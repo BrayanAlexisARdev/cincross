@@ -8,17 +8,11 @@ namespace CINCROSS;
 partial class Form1
 {
 	private TimeSpan _timeRemaining;
-
 	private bool _timerRunning;
-
 	private Timer countdownTimer = null!;
-
 	private int _manualHours;
-
 	private int _manualMinutes;
-
 	private double _manualTotalSeconds;
-
 	private int _presetBlockGen;
 
 	private async Task ShowPresetBlockMessage()
@@ -250,5 +244,67 @@ partial class Form1
 		if (t.Minutes > 0) s += (s.Length > 0 ? " " : "") + $"{t.Minutes}M";
 		if (s.Length == 0) s = "0M";
 		return s + " REMAIN";
+	}
+
+	internal void ApplyTimerPreset(int hours, int minutes, bool startImmediately)
+	{
+		_presetBlockMsg = false;
+		ClearPresetSelections();
+
+		_manualHours = hours;
+		_manualMinutes = minutes;
+
+		foreach (Control row in tasksListPanel.Controls)
+		{
+			if (row is Panel p)
+			{
+				foreach (Control c in p.Controls)
+				{
+					if (c is Button btn && !string.IsNullOrEmpty(btn.Text))
+					{
+						string t = btn.Text.Trim().ToUpperInvariant();
+						if (t.EndsWith("H") && int.TryParse(t[..^1], out int vh) && vh == hours)
+						{
+							if (_hourPresetBtn != null) SetPresetSelected(_hourPresetBtn, false);
+							SetPresetSelected(btn, true);
+							_hourPresetBtn = btn;
+						}
+						if (t.EndsWith("M") && int.TryParse(t[..^1], out int vm) && vm == minutes)
+						{
+							if (_minPresetBtn != null) SetPresetSelected(_minPresetBtn, false);
+							SetPresetSelected(btn, true);
+							_minPresetBtn = btn;
+						}
+					}
+				}
+			}
+		}
+
+		_manualTotalSeconds = _manualHours * 3600 + _manualMinutes * 60;
+		_timeRemaining = new TimeSpan(_manualHours, _manualMinutes, 0);
+		UpdateTimerDisplay();
+		UpdateTimeSelectorInfo();
+
+		if (startImmediately && _timeRemaining.TotalSeconds > 0.0)
+		{
+			StartTimer();
+			return;
+		}
+		if (_timeRemaining.TotalSeconds > 0.0)
+		{
+			_timerRunning = false;
+			countdownTimer.Stop();
+			btnP.Text = "▶";
+			btnS.Text = "⏹";
+			return;
+		}
+		StopTimer();
+	}
+
+	internal void ApplyTimerPresetTotalMinutes(int totalMinutes, bool startImmediately)
+	{
+		int h = totalMinutes / 60;
+		int m = totalMinutes % 60;
+		ApplyTimerPreset(h, m, startImmediately);
 	}
 }
