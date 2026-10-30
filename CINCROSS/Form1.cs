@@ -530,14 +530,23 @@ private Button btnVolLow = null!;
 	private void Form1_Load(object? sender, EventArgs e)
 	{
 		base.StartPosition = FormStartPosition.Manual;
-		Screen? screen = Screen.PrimaryScreen;
-		int screenWidth = screen?.WorkingArea.Width ?? 1920;
-		base.Location = new Point(screenWidth - base.Width, 150);
+		PositionAtRightEdge();
 		lblCassettes.Text = "CASSETTES";
 		txtCassetteNum.Text = "0";
 		lblCassetteTotal.Text = "/0";
 		_eqTimer?.Start();
 		this.BeginInvoke(new Action(() => LoadAllData()));
+	}
+
+	private void PositionAtRightEdge()
+	{
+		Screen? screen = Screen.PrimaryScreen;
+		if (screen == null) return;
+		Rectangle wa = screen.WorkingArea;
+		int x = Math.Max(wa.Left, wa.Right - base.Width);
+		int y = Math.Min(150, wa.Bottom - base.Height);
+		if (y < wa.Top) y = wa.Top;
+		base.Location = new Point(x, y);
 	}
 
 	private void LoadAllData()
@@ -713,10 +722,7 @@ private Button btnVolLow = null!;
 		btnP.BackColor = Color.Transparent;
 		btnS.BackColor = Color.Transparent;
 		ApplyRoundedFormRegion();
-		if (screen != null)
-		{
-			base.Location = new Point(screen.WorkingArea.Width - base.Width, 150);
-		}
+		PositionAtRightEdge();
 	}
 
 	private void BuildProgressIndicator()
@@ -1073,7 +1079,7 @@ private Button btnVolLow = null!;
 		Button btnOpenPdf = CreateToolButton("PDF", toolW);
 		Button btnYoutube = CreateToolButton("YT", toolW);
 
-		string pdfPath = Path.Combine(Directory.GetCurrentDirectory(), "files", "pdf", "file.pdf");
+		string pdfPath = Path.Combine(PathHelper.GetFilesDir(), "pdf", "file.pdf");
 		btnOpenPdf.Click += (_, _) =>
 		{
 			if (!File.Exists(pdfPath)) return;
@@ -1668,7 +1674,7 @@ private Button btnVolLow = null!;
 		this.btnCloseApp.Text = "X CLOSE";
 		this.btnCloseApp.UseVisualStyleBackColor = false;
 		this.btnCloseApp.Click += new System.EventHandler(btnCloseApp_Click);
-		string cincrossPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "files", "img", "cin_LOGO.png");
+		string cincrossPath = PathHelper.ResolveImg("cin_LOGO.png");
 		if (System.IO.File.Exists(cincrossPath))
 		{
 			this.picCincross.Image = PathHelper.LoadImage(cincrossPath);
@@ -2086,8 +2092,7 @@ private Button btnVolLow = null!;
 		this.tasksListPanel.Size = new System.Drawing.Size(260, 800);
 		this.tasksListPanel.TabIndex = 5;
 
-		base.AutoScaleDimensions = new System.Drawing.SizeF(10f, 25f);
-		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 		base.ClientSize = new System.Drawing.Size(280, 817);
 		base.Controls.Add(this.cassettesHeaderPanel);
 		base.Controls.Add(this.pnlFullListRow);

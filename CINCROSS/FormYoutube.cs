@@ -1,6 +1,8 @@
 using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
 
 namespace CINCROSS;
@@ -94,12 +96,20 @@ public class FormYoutube : Form
 			Dock = DockStyle.Fill,
 			BackColor = Color.FromArgb(35, 35, 35)
 		};
+		CoreWebView2Environment? environment = null;
+		async Task EnsureWebViewAsync()
+		{
+			environment ??= await CoreWebView2Environment.CreateAsync(
+				null, PathHelper.GetWebViewDataDir());
+			await webView.EnsureCoreWebView2Async(environment);
+		}
+
 		webView.CoreWebView2InitializationCompleted += (_, _) =>
 		{
 			webView.CoreWebView2.Settings.IsScriptEnabled = true;
 			webView.CoreWebView2.Navigate("https://www.yout-ube.com/watch?v=v8H5ACDqlHo&t=4s");
 		};
-		_ = webView.EnsureCoreWebView2Async();
+		_ = EnsureWebViewAsync();
 
 		btnGo.Click += (_, _) =>
 		{
@@ -107,7 +117,7 @@ public class FormYoutube : Form
 			if (Uri.TryCreate(input, UriKind.Absolute, out var uri) &&
 			    (uri.Scheme == "http" || uri.Scheme == "https"))
 			{
-				_ = webView.EnsureCoreWebView2Async();
+				_ = EnsureWebViewAsync();
 				webView.CoreWebView2?.Navigate(input);
 			}
 		};

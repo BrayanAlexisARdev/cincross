@@ -13,7 +13,7 @@ public class NoteItem
     public DateTime SavedAt { get; set; } = DateTime.Now;
 }
 
-/// <summary>Persistencia de las notas (máximo 10) en files/notes_data.json.</summary>
+/// <summary>Persistencia de las notas (máximo 10) en %LOCALAPPDATA%\CINCROSS\notes_data.json.</summary>
 public class NotesData
 {
     public const int MaxNotes = 10;
@@ -22,7 +22,7 @@ public class NotesData
 
     public static string GetFilePath()
     {
-        return Path.Combine(PathHelper.GetFilesDir(), "notes_data.json");
+        return Path.Combine(PathHelper.GetDataDir(), "notes_data.json");
     }
 
     public static NotesData Load()

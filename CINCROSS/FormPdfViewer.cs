@@ -1,4 +1,6 @@
+using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using PdfiumViewer;
 
@@ -6,6 +8,32 @@ namespace CINCROSS;
 
 public class FormPdfViewer : Form
 {
+	static FormPdfViewer()
+	{
+		PdfiumResolver.Resolve += (_, e) => e.PdfiumFileName = FindPdfium();
+	}
+
+	private static string? FindPdfium()
+	{
+		string baseDir = AppContext.BaseDirectory;
+		string[] candidates = new string[]
+		{
+			Path.Combine(baseDir, "x64", "pdfium.dll"),
+			Path.Combine(baseDir, "pdfium.dll"),
+			Path.Combine(Path.GetDirectoryName(typeof(FormPdfViewer).Assembly.Location) ?? string.Empty, "x64", "pdfium.dll")
+		};
+
+		foreach (string candidate in candidates)
+		{
+			if (!string.IsNullOrEmpty(candidate) && File.Exists(candidate))
+			{
+				return candidate;
+			}
+		}
+
+		return null;
+	}
+
 	public FormPdfViewer(string pdfPath, Form owner)
 	{
 		Text = "";

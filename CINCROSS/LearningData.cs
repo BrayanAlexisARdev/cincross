@@ -76,7 +76,7 @@ public class LearningData
 
     public static string GetFilePath()
     {
-        return Path.Combine(PathHelper.GetFilesDir(), "learning_data.json");
+        return Path.Combine(PathHelper.GetDataDir(), "learning_data.json");
     }
 
     public static LearningData? Load()

@@ -11,6 +11,7 @@ internal static class PathHelper
     private static readonly Lazy<string> _imgDir = new(() => ProbeDir("img"));
     private static readonly Lazy<string> _m3uDir = new(() => ProbeDir("m3u"));
     private static readonly Lazy<string> _filesDir = new(() => ProbeDir(null));
+    private static readonly Lazy<string> _dataDir = new(CreateDataDir);
 
     public static string StartupPath => AppDomain.CurrentDomain.BaseDirectory;
 
@@ -19,6 +20,24 @@ internal static class PathHelper
     public static string GetM3uDir() => _m3uDir.Value;
 
     public static string GetFilesDir() => _filesDir.Value;
+
+    public static string GetDataDir() => _dataDir.Value;
+
+    public static string GetWebViewDataDir()
+    {
+        string dir = Path.Combine(GetDataDir(), "WebView2");
+        Directory.CreateDirectory(dir);
+        return dir;
+    }
+
+    private static string CreateDataDir()
+    {
+        string dir = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "CINCROSS");
+        Directory.CreateDirectory(dir);
+        return dir;
+    }
 
     private static string ProbeDir(string? sub)
     {
